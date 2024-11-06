@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Vuelos de Rionegro</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Vuelos de Rionegro</h1>
+            <h2>by Pablo Baez Santamaria</h2>
+        </header>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='/'">Inicio</button>
+            <button onclick="window.location.href='/add_flight'">Añadir Vuelo</button>
+            <button onclick="window.location.href='/list_flights'">Listar Vuelos</button>
+            <button onclick="window.location.href='/factorial_form'">Calcular Factorial</button>
+        </div>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+</body>
+</html>

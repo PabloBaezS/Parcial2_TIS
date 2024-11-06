@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Lista de Vuelos</h2>
+    {% if flights %}
+        <ul>
+            {% for flight in flights %}
+                <li>ID: {{ flight.id }}, Nombre: {{ flight.nombre }}, Tipo: {{ flight.tipo }}, Precio: ${{ "{:,.2f}".format(flight.precio) }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay vuelos disponibles.</p>
+    {% endif %}
+{% endblock %}
